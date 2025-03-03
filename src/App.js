@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AudioPlayer from "./components/AudioPlayer";
+import ProgressBar from "./components/ProgressBar";
+import Bookmarks from "./components/Bookmarks";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div style={styles.container}>
+            <h2 style={styles.title}>Long Audio Player</h2>
+            <ProgressBar />
+            <AudioPlayer />
+            <Bookmarks />
+        </div>
+    );
+};
+
+const styles = {
+    container: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+        width: "100%",
+        maxWidth: "600px",
+        margin: "0 auto",
+    },
+    title: {
+        textAlign: "center",
+        fontSize: "24px",
+        fontWeight: "bold",
+        marginBottom: "20px",
+    }
+};
 
 export default App;
