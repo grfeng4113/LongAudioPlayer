@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# **Long Audio Player 🎵**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based Long Audio Player** that supports **bookmarking, progress visualization, file uploads, and last stop saving**. Users can seamlessly navigate long audio files with an **interactive progress bar**, manage **custom bookmarks**, and **upload their own MP3 files**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **📌 Features**
+- **📂 Upload MP3 Files** – Allows users to upload and play their own audio files.
+- **🎵 Resume Playback** – Saves the last played position for each file.
+- **🔖 Bookmarking System** – Users can add, rename, and delete bookmarks for easy navigation.
+- **📊 Interactive Progress Bar** – A **custom SVG progress bar** for accurate playback navigation.
+- **💾 Persistent Storage** – Uses **localStorage** to retain progress and bookmarks across sessions.
+- **🔁 Auto Resume** – If the same file is played again, it resumes from the last stop.
+- **📱 Responsive Design** – Works across desktop and mobile devices.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **🚀 Installation & Setup**
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/grfeng4113/LongAudioPlayer.git
+cd long-audio-player
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **2️⃣ Install Dependencies**
+```sh
+npm install
+```
 
-### `npm test`
+### **3️⃣ Start the Application**
+```sh
+npm start
+```
+The app will be available at **`http://localhost:3000/`**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **📁 Project Structure**
+```
+long-audio-player/
+│── public/                # Static files (default audio)
+│── src/                   # Main source code
+│   ├── components/        # React components
+│   │   ├── AudioPlayer.js # Audio player with upload feature
+│   │   ├── ProgressBar.js # Custom interactive progress bar
+│   │   ├── Bookmarks.js   # Bookmark management system
+│   │   ├── AudioContext.js    # Global audio state using React Context
+│   ├── App.js             # Main application layout
+│   ├── index.js           # Entry point
+│── package.json           # Project dependencies
+│── README.md              # Project documentation
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **🛠 How to Use**
+### **🎧 Playing Audio**
+1. **By Default:** The app plays the built-in `audio.mp3` from `/public/assets/`.
+2. **Upload Your Own File:** Click the **upload button** and select an MP3 file.
+3. **Play/Pause Control:** Click the **▶️ Play / ⏸ Pause** button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **🔖 Managing Bookmarks**
+1. **Add Bookmark:** Click **"➕ Add Bookmark"** to save the current time.
+2. **Play a Bookmark:** Click on a saved bookmark to jump to that time.
+3. **Rename Bookmark:** Click the **✏️ Rename** button, type a new name, and confirm.
+4. **Delete Bookmark:** Click the **❌ Delete** button to remove it.
 
-### `npm run eject`
+### **📊 Navigating with the Progress Bar**
+- **Click** anywhere on the progress bar to jump to a specific part.
+- The progress bar follows a **custom path** with precise navigation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **💾 Saving Progress**
+- **Each file has its own bookmarks and last stop.**
+- **Progress is saved automatically** and restored when you re-open the same file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## **📌 Future Enhancements**
+- 🎭 **More Customizable UI**
+- 🎼 **Waveform Visualization**
+- 📱 **PWA Support for Offline Use**
+- 🚀 **Cloud Sync for Bookmarks & Progress**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **🤝 Contributing**
+Feel free to **fork this project** and submit pull requests! Contributions are welcome. 🎉
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy seamless long-audio playback with bookmarking & progress tracking! 🚀🎶
