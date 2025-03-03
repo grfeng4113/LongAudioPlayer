@@ -45,6 +45,7 @@ long-audio-player/
 │   │   ├── ProgressBar.js # Custom interactive progress bar
 │   │   ├── Bookmarks.js   # Bookmark management system
 │   │   ├── AudioContext.js    # Global audio state using React Context
+│   │   ├── utils.js   # Basic components
 │   ├── App.js             # Main application layout
 │   ├── index.js           # Entry point
 │── package.json           # Project dependencies
