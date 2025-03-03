@@ -19,7 +19,7 @@ A **React-based Long Audio Player** that supports **bookmarking, progress visual
 ### **1️⃣ Clone the Repository**
 ```sh
 git clone https://github.com/grfeng4113/LongAudioPlayer.git
-cd long-audio-player
+cd LongAudioPlayer
 ```
 
 ### **2️⃣ Install Dependencies**
